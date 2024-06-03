@@ -1,6 +1,7 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Phone } from "lucide-react";
 import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 const COMMONLY_FACE_ISSUES = [
   { id: 1, title: "Chest pain", src: "/images/home/issue-1.webp" },
@@ -31,6 +32,30 @@ const EXPLORE_ARTICLE_CARDS = [
   { id: 1, title: "Leading with Lab Data", description: "Our lab data has the answers to empower Doctors", href: "/", src: "/images/home/explore-1.webp" },
   { id: 2, title: "Delivering insights ", description: "Find talent and interact with candidates in an innovative way", href: "/", src: "/images/home/explore-2.webp" },
   { id: 3, title: "Stop wondering. Go test yourself.", description: "Explore over 50 self-ordered lab tests get answers about your health.", href: "/", src: "/images/home/explore-1.webp" },
+];
+
+const BLOGS = [
+  {
+    id: 1,
+    src: "/images/home/blog-1.webp",
+    title: "Common Winter Ailments During the Christmas Season",
+    description: "Christmas is all about joy and excitement. The streets are beautifully adorne",
+    tag: "Blog",
+  },
+  {
+    id: 2,
+    src: "/images/home/blog-2.webp",
+    title: "Revolutionize Healthcare with the Power of Pharmacogenomics",
+    description: "Introducing the game changer in healthcare: Pharmacogenomics ",
+    tag: "Service",
+  },
+  {
+    id: 3,
+    src: "/images/home/blog-1.webp",
+    title: "Lower Back Pain- Leading cause of Disabilities around the world",
+    description: "Christmas is all about joy and excitement. The streets are beautifully adorne",
+    tag: "Blog",
+  },
 ];
 
 export default function Home() {
@@ -157,7 +182,58 @@ export default function Home() {
       <section className="pt-[33px] bg-[#fff]">
         <h2 className="text-[1.13rem] text-[var(--primary-blue)] font-bold text-center mb-[16px]">Blogs & Resources</h2>
         <div className="max-w-[1440px] mx-auto px-[65px]">
-          <div className="bg-[#F2F2F2] mt-[18px] lg:p-[80px] rounded-[22px]"></div>
+          <div className="bg-[#F2F2F2] mt-[18px] lg:p-[80px] lg:pb-5 rounded-[22px] grid grid-cols-[429px_1fr]">
+            <Card className="main-card border-0 bg-transparent shadow-none">
+              <CardHeader>
+                <Image src="/images/home/main-blog.webp" alt="A women holding oxygen mask while inhaling oxygen from it." width={429} height={297} className="mb-[23px]" />
+                <CardTitle className="">Everything You Should Know About Recurrent Respiratory Infections</CardTitle>
+              </CardHeader>
+              <CardFooter>
+                <p className="tag text-[0.88rem] py-1 px-3 rounded-full border-[#121A44] border-[1px]">Article</p>
+              </CardFooter>
+            </Card>
+
+            <div className="other-cards">
+              {BLOGS.map((card, index) => (
+                <Card className="main-card border-0 bg-transparent shadow-none">
+                  <CardHeader className="flex flex-row gap-[30px] items-start">
+                    <Image src={card.src} alt="A women holding oxygen mask while inhaling oxygen from it." width={229} height={171} className="mb-[23px]" />
+                    <div className="max-w-[423px]">
+                      <CardTitle className="mb-0 text-[1.5rem] text-[var(--primary-blue)]">{card.title}</CardTitle>
+                      <CardDescription className="text-[0.88rem] text-[#82869B] mt-[14px]">{card.description}</CardDescription>
+                      <p className="tag text-[0.88rem] py-1 px-3 rounded-full border-[#121A44] border-[1px] w-fit mt-[14px]">{card.tag}</p>
+                    </div>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="max-w-[1440px] mx-auto mt-[80px]">
+        <div className="relative w-full h-[468px] pt-[80px]">
+          <Image src="/images/home/careers-bg.webp" alt="Careers background" fill sizes="100%" className="object-contain" />
+          <h2 className="relative text-[4rem] text-[#101010] font-medium leading-[1.3] mb-[68px] pl-[60px]">
+            Be at the Forefront of <br />
+            Devansh lab werks
+          </h2>
+          <div className="relative flex items-center justify-between px-[60px]">
+            <p className="mb-0 max-w-[460px]">Devansh Lab Werks, Inc. has multiple openings at multiple levels, open careers page for more information.</p>
+            <div className="action-btns flex items-center gap-[16px]">
+              <button type="button" className="py-[18px] px-[32px] bg-[var(--primary-blue)] rounded-full">
+                <div className="flex items-center gap-2">
+                  <span className="text-[#fff]">Careers</span>
+                  <ArrowUpRight className="w-7 h-7 text-[#fff]" />
+                </div>
+              </button>
+              <button type="button" className="py-[18px] px-[32px] border-[var(--primary-blue)] border-[1px] rounded-full">
+                <div className="flex items-center gap-2">
+                  <span className="text-[var(--primary-blue)]">Careers</span>
+                  <Phone className="w-7 h-7 text-[var(--primary-blue)]" />
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
