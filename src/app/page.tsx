@@ -195,7 +195,7 @@ export default function Home() {
 
             <div className="other-cards">
               {BLOGS.map((card, index) => (
-                <Card className="main-card border-0 bg-transparent shadow-none">
+                <Card key={card.id} className="main-card border-0 bg-transparent shadow-none">
                   <CardHeader className="flex flex-row gap-[30px] items-start">
                     <Image src={card.src} alt="A women holding oxygen mask while inhaling oxygen from it." width={229} height={171} className="mb-[23px]" />
                     <div className="max-w-[423px]">
