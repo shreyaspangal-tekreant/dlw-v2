@@ -106,7 +106,7 @@ export default function Home() {
           <div className="bg-[#F2F2F2] pt-[38px] pb-[58px] rounded-[22px]">
             <ul className="grid grid-cols-[155px_155px_155px_155px_155px] place-content-center gap-[68px]">
               {OUR_SERVICES.map((item, index) => (
-                <li className="flex flex-col items-center justify-center">
+                <li key={item.id} className="flex flex-col items-center justify-center">
                   <Image src={item.src} alt={item.title} width={111} height={111} className={`object-contain mb-[30px] ${item.id === 2 ? "p-2" : ""}`} />
                   <p className="mb-0 text-center">{item.title}</p>
                 </li>
@@ -138,7 +138,11 @@ export default function Home() {
                       <Image src={item.src} alt={item.title} width={296} height={300} className="mb-[24px]" />
                       <p className="mb-0 font-bold text-[#1D1D21] mb-[4px]">{item.title}</p>
                       <p className="mb-0 text-[#606060] mb-[16px]">{item.description}</p>
-                      <button type="button" aria-label="Read more" className="rounded-full w-full py-[12px] flex items-center justify-center gap-[10px] text-[#fff] text-[1rem] bg-[var(--primary-blue)]">
+                      <button
+                        type="button"
+                        aria-label="Read more"
+                        className="rounded-full w-full py-[12px] flex items-center justify-center gap-[10px] text-[#fff] text-[1rem] bg-[var(--primary-blue)]"
+                      >
                         <span className="">Read more</span>
                         <ArrowUpRight className="w-7 h-7" />
                       </button>
@@ -148,6 +152,12 @@ export default function Home() {
               </CarouselContent>
             </Carousel>
           </div>
+        </div>
+      </section>
+      <section className="pt-[33px] bg-[#fff]">
+        <h2 className="text-[1.13rem] text-[var(--primary-blue)] font-bold text-center mb-[16px]">Blogs & Resources</h2>
+        <div className="max-w-[1440px] mx-auto px-[65px]">
+          <div className="bg-[#F2F2F2] mt-[18px] lg:p-[80px] rounded-[22px]"></div>
         </div>
       </section>
     </main>
