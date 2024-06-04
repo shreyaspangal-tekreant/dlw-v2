@@ -169,13 +169,13 @@ export default function Home() {
         </div>
       </section>
       <section className="max-w-[1440px] mx-auto mt-[80px]">
-        <div className="relative bg-[#cecece] md:bg-transparent w-full sm:h-[468px] pt-[80px]">
-          <Image src="/images/home/careers-bg.webp" alt="Careers background" fill sizes="100%" className="hidden md:inline-block object-contain" />
+        <div className="relative bg-[#cecece] lg:bg-transparent w-full sm:h-[468px] pt-[80px]">
+          <Image src="/images/home/careers-bg.webp" alt="Careers background" fill sizes="100%" className="hidden lg:inline-block object-contain" />
           <h2 className="relative text-[2.06rem] md:text-[3.12rem] xl:text-[4rem] text-[#101010] font-medium leading-[1.3] mb-[20px] sm:mb-[68px] pl-[30px] sm:pl-[60px]">
             Be at the Forefront of <br />
             Devansh lab werks
           </h2>
-          <div className="relative flex flex-col md:flex-row md:items-center justify-between gap-[30px] md:gap-0 px-[30px] sm:px-[60px]">
+          <div className="relative flex flex-col md:flex-row md:items-center justify-between gap-[30px] lg:gap-0 px-[30px] sm:px-[60px]">
             <p className="mb-0 max-w-[460px]">Devansh Lab Werks, Inc. has multiple openings at multiple levels, open careers page for more information.</p>
             <div className="action-btns flex items-center gap-[16px] mb-10 sm:mb-0">
               <button type="button" className="py-[12px] px-[16px] sm:py-[18px] sm:px-[32px] bg-[var(--primary-blue)] rounded-full">
