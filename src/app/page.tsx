@@ -12,17 +12,19 @@ export default function Home() {
           <article className="">
             <h1 className="text-[2.06rem] md:text-[3.12rem] lg:text-[4rem] font-medium text-[#fff] mb-[13px] tracking-[3px] pt-[26px]">
               Fast, friendly <br /> and <span className="bg-[var(--primary-red)] px-2 py-1 rounded-[22px]">affordable</span> <br />{" "}
-              <span className="bg-[var(--primary-red)] px-2 py-1 rounded-[22px]">testing</span>
-              <span className="relative z-[5] inline-flex w-fit group cursor-pointer w-[150px] max-w-[150px]">
-                <button
-                  type="button"
-                  aria-label="Know more"
-                  className="relative z-[0] bg-[var(--primary-blue)] group-hover:bg-[#fff] ml-5 text-[1.13rem] rounded-[100px] border-[1px] border-[#fff] w-[100px] group-hover:w-[150px] transition-[width] p-1"
-                >
-                  <ArrowUpRight className="w-10 h-10 group-hover:rotate-[45deg] transition-all group-hover:text-[var(--primary-blue)]" />
-                </button>
-                <div className="relative z-[-1] -ml-[80px] rounded-[120px] border-[1px] border-[#fff] h-12 w-[100px] group-hover:-ml-[100px]"></div>
-                <div className="relative z-[-2] -ml-[80px] rounded-[140px] border-[1px] border-[#fff] h-12 w-[100px] group-hover:-ml-[100px]"></div>
+              <span className="flex flex-col sm:flex-row sm:items-center gap-5 w-fit">
+                <span className="bg-[var(--primary-red)] px-2 rounded-[22px]">testing</span>
+                <span className="relative z-[5] inline-flex w-fit group cursor-pointer w-[150px] max-w-[150px]">
+                  <button
+                    type="button"
+                    aria-label="Know more"
+                    className="relative z-[0] bg-[var(--primary-blue)] group-hover:bg-[#fff] text-[1.13rem] rounded-[100px] border-[1px] border-[#fff] w-[100px] group-hover:w-[150px] transition-[width] p-1"
+                  >
+                    <ArrowUpRight className="w-10 h-10 group-hover:rotate-[45deg] transition-all group-hover:text-[var(--primary-blue)]" />
+                  </button>
+                  <div className="relative z-[-1] -ml-[80px] rounded-[120px] border-[1px] border-[#fff] h-12 w-[100px] group-hover:invisible"></div>
+                  <div className="relative z-[-2] -ml-[80px] rounded-[140px] border-[1px] border-[#fff] h-12 w-[100px] group-hover:invisible"></div>
+                </span>
               </span>
             </h1>
             <p className="mb-0 text-[#DADADA] lg:text-[1.13rem] mb-[35px]">We work with cutting edge testing technology and offer a fast turnaround time to keep your experience hassle-free.</p>
