@@ -1,49 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-const footerNavLinks = [
-  {
-    id: 1,
-    title: "company",
-    links: [
-      { id: 1, title: "About", href: "/" },
-      { id: 2, title: "Services", href: "/" },
-      { id: 3, title: "Contact us", href: "/" },
-    ],
-  },
-  {
-    id: 2,
-    title: "recources",
-    links: [
-      { id: 1, title: "Blog", href: "/" },
-      { id: 2, title: "Payments", href: "/" },
-      { id: 3, title: "Careers", href: "/" },
-    ],
-  },
-  {
-    id: 3,
-    title: "legal",
-    links: [
-      { id: 1, title: "Terms of Use", href: "/" },
-      { id: 2, title: "Privacy Policy", href: "/" },
-    ],
-  },
-];
-
-const footerSocialLinks = [
-  { id: 1, title: "Instagram" },
-  { id: 2, title: "LinkedIn" },
-  { id: 3, title: "Twitter" },
-  { id: 4, title: "Youtube" },
-];
+import { footerNavLinks, footerSocialLinks } from "@/data/main-footer";
 
 export default function MainFooter() {
   return (
-    <footer className="max-w-[1440px] mx-auto px-[32px] mb-[43px] mt-[33px]">
-      <div className="bg-[var(--primary-blue)] text-[#fff] rounded-[22px] px-5 md:px-10 xl:px-[48px] pt-[80px] pb-[56px]">
-        <div className="flex items-start justify-between gap-10 pb-[80px] border-b-[1px] border-[#606060]">
-          <section className="inter flex items-start flex-wrap gap-[75px]">
+    <footer className="max-w-[1440px] mx-auto sm:px-[32px] sm:mb-[43px] mt-[33px]">
+      <div className="bg-[var(--primary-blue)] text-[#fff] sm:rounded-[22px] px-5 md:px-10 xl:px-[48px] pt-[80px] pb-[56px]">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-10 pb-[80px] border-b-[1px] border-[#606060]">
+          <section className="order-1 md:order-0 inter flex items-start flex-wrap gap-[75px]">
             {footerNavLinks.map((item, index) => (
               <article key={item.id}>
                 <p className="mb-0 capitalize text-[1.5rem] font-semibold mb-[24px]">{item.title}</p>
@@ -59,7 +24,7 @@ export default function MainFooter() {
               </article>
             ))}
           </section>
-          <section className="">
+          <section className="order-0 md:order-1">
             <Image src="/images/defaults/logo-white.webp" alt="DLW logo" className="" width={153} height={88} />
             <p className="mb-0 mt-[28px] max-w-[513px]">We work with cutting edge testing technology and offer a fast turnaround time to keep your experience hassle-free.</p>
           </section>
@@ -77,7 +42,7 @@ export default function MainFooter() {
                 </button>
               </li>
             ))}
-            <li className="flex-1">
+            <li className="flex-1 basis-[100%] md:basis-auto">
               <div className="cursor-default w-full rounded-[100px] py-[10px] px-[16px] text-[1rem] border-[1px] border-[#fff] flex items-center justify-center">
                 <div className="flex items-center gap-[8px]">
                   <Image src="/images/defaults/logo-white.webp" alt="DLW logo" className="" width={38} height={22} />

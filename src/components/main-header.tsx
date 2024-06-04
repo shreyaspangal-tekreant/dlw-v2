@@ -23,7 +23,7 @@ export default function MainHeader() {
       <section className="max-w-[1440px] mx-auto pl-5 md:pl-10 xl:pl-[91px] pr-5 md:pr-10 xl:pr-[54px] py-[11.5px]">
         <div className="flex items-center justify-between">
           <Image src="/images/defaults/logo-blue.webp" alt="DLW logo" className="object-contain" width={60} height={35} />
-          <ul className="flex items-center gap-[34px]">
+          <ul className="hidden lg:flex items-center gap-[34px]">
             {navLinksInit.slice(0, 6).map((navLink, index) => (
               <li key={navLink.id}>
                 <Link href={navLink.href} className="capitalize text-[0.75rem] text-[var(--primary-blue)] hover:border-b-[1px] border-[var(--primary-blue)]">
@@ -36,7 +36,7 @@ export default function MainHeader() {
             <button type="button" aria-label="Open search">
               <Search className="text-[var(--primary-blue)] w-5 h-5" />
             </button>
-            <ul className="flex items-center gap-[34px]">
+            <ul className="hidden lg:flex items-center gap-[34px]">
               {navLinksInit.slice(6).map((navLink, index) => (
                 <li key={navLink.id}>
                   <Link href={navLink.href} className="capitalize text-[0.75rem] text-[var(--primary-blue)] font-bold hover:border-b-[1px] border-[var(--primary-blue)]">
