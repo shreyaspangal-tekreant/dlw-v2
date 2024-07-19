@@ -5,8 +5,8 @@ import { footerNavLinks, footerSocialLinks } from "@/data/main-footer";
 
 export default function MainFooter() {
   return (
-    <footer className="max-w-[1440px] mx-auto sm:px-[32px] sm:mb-[43px] mt-[33px]">
-      <div className="bg-[var(--primary-blue)] text-[#fff] sm:rounded-[22px] px-5 md:px-10 xl:px-[48px] pt-[80px] pb-[56px]">
+    <footer className="sm:mt-[33px]">
+      <div className="bg-[var(--primary-blue)] text-[#fff] px-5 md:px-10 xl:px-[48px] pt-[80px] pb-[56px]">
         <div className="flex flex-col md:flex-row items-start justify-between gap-10 pb-[80px] border-b-[1px] border-[#606060]">
           <section className="order-1 md:order-0 inter flex items-start flex-wrap gap-[75px]">
             {footerNavLinks.map((item, index) => (

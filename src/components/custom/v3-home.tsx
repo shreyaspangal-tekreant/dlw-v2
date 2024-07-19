@@ -4,14 +4,17 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { BLOGS, COMMONLY_FACE_ISSUES, EXPLORE_ARTICLE_CARDS, EXPLORE_OPTIONS, OUR_SERVICES } from "@/data/home";
 
-const CONTAINER_STYLES = "max-w-[1440px] mx-auto px-[30px] lg:px-[65px]";
+const CONTAINER_STYLES = "max-w-[1440px] mx-auto sm:px-[20px] lg:px-[65px]";
 
 function V3Home() {
   return (
     <>
+    <section className="">
+      
+    </section>
       <section className="pt-[33px] bg-[#fff]">
         <div className={`${CONTAINER_STYLES}`}>
-          <div className="bg-[#F2F2F2] mt-[18px] lg:p-[80px] lg:pb-5 rounded-[22px] grid xl:grid-cols-[429px_1fr]">
+          <div className="bg-[#F2F2F2] mt-[18px] lg:p-[80px] lg:pb-5 sm:rounded-[22px] grid xl:grid-cols-[429px_1fr]">
             <Card className="main-card border-0 bg-transparent shadow-none">
               <CardHeader>
                 <Image src="/images/home/main-blog.webp" alt="A women holding oxygen mask while inhaling oxygen from it." width={429} height={297} className="mb-[23px]" />
@@ -39,12 +42,12 @@ function V3Home() {
           </div>
         </div>
       </section>
-      <section className={`${CONTAINER_STYLES} mt-5`}>
-        <div className="wrapper bg-[#121116] py-[33px] px-[1rem] sm:px-[3rem] rounded-[22px]">
+      <section className={`${CONTAINER_STYLES} sm:mt-5`}>
+        <div className="wrapper bg-[#121116] py-[33px] px-[2rem] sm:px-[3rem] sm:rounded-[22px]">
           <div className="flex flex-wrap gap-10 items-center justify-between max-w-[1100px] mx-auto">
             <div className="flex flex-col gap-[16px] text-[#fff] max-w-[725px]">
               <p className="mb-0 text-[22px] sm:text-[33px] font-bold">Explore Exciting Opportunities.</p>
-              <p className="mb-0 text-[14px] sm:text-[18px] font-light">Didn't find what you're looking for? Join our Talent Network for updates on new openings. Sign Up Now</p>
+              <p className="mb-0 text-[14px] sm:text-[18px] font-light">Didn&apos;t find what you&apos;re looking for? Join our Talent Network for updates on new openings. Sign Up Now</p>
             </div>
             <button
               type="button"
